@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vinet/modules/login/screens/login_screen.dart';
+import 'package:flutter_vinet/modules/otp/screens/otp_screen.dart';
 import 'package:flutter_vinet/modules/register/screens/register_screen.dart';
 import 'package:flutter_vinet/modules/splash/screens/splash_screen.dart';
 import 'package:flutter_vinet/modules/walkthrough/screens/walkthrough_1.dart';
@@ -31,6 +32,8 @@ class Routes {
         return PageTransition(child: LoginScreen(), type: PageTransitionType.bottomToTop);
       case '/register':
         return PageTransition(child: RegisterScreen(), type: PageTransitionType.bottomToTop,duration: Duration(milliseconds: 200));
+      case '/otp':
+        return PageTransition(child: OTPScreen(), type: PageTransitionType.rightToLeft);
       default:
         return _errorRoute();
     }

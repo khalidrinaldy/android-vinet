@@ -89,25 +89,50 @@ class Widgets {
     );
   }
 
-  Widget textInput({TextEditingController? controller, bool? obscure}) {
-    return TextField(
-      controller: controller,
-      obscureText: obscure!,
-      decoration: InputDecoration(
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(5),
-          borderSide: BorderSide(
-            color: Color(myColors.secondaryGrey()).withOpacity(0.3),
-            width: 1,
+  Widget textInput({TextEditingController? controller, bool? obscure, TextInputType? inputType ,String? Function(String?)? validator, Widget? icon}) {
+    return ConstrainedBox(
+      constraints: BoxConstraints(
+        maxHeight: 70,
+        maxWidth: 293,
+      ),
+      child: TextFormField(
+        controller: controller,
+        obscureText: obscure!,
+        decoration: InputDecoration(
+          contentPadding: EdgeInsets.symmetric(vertical: 0.0, horizontal: 10.0),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(5),
+            borderSide: BorderSide(
+              color: Color(myColors.secondaryGrey()).withOpacity(0.3),
+              width: 1,
+            ),
           ),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(5),
-          borderSide: BorderSide(
-            color: Colors.black.withOpacity(0.3),
-            width: 1,
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(5),
+            borderSide: BorderSide(
+              color: Color(myColors.secondaryGrey()).withOpacity(0.3),
+              width: 1,
+            ),
           ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(5),
+            borderSide: BorderSide(
+              color: Colors.black.withOpacity(0.3),
+              width: 1,
+            ),
+          ),
+          errorBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(5),
+            borderSide: BorderSide(
+              color: Color(myColors.primaryRed()).withOpacity(0.3),
+              width: 1,
+            ),
+          ),
+          suffixIcon: icon,
         ),
+        textInputAction: TextInputAction.done,
+        keyboardType: inputType,
+        validator: validator
       ),
     );
   }
@@ -157,7 +182,7 @@ class Widgets {
     );
   }
 
-  Widget buttonSubmitGreen({void callback}) {
+  Widget buttonSubmitGreen({VoidCallback? callback}) {
     return Container(
       width: 288,
       height: 42,
@@ -191,7 +216,7 @@ class Widgets {
             color: Color(myColors.secondaryTextColor()),
           ),
         ),
-        onPressed: () => callback,
+        onPressed: callback,
       ),
     );
   }
