@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_vinet/modules/login/screens/forgot_otp.dart';
+import 'package:flutter_vinet/modules/login/screens/forgot_password.dart';
 import 'package:flutter_vinet/modules/login/screens/login_screen.dart';
+import 'package:flutter_vinet/modules/login/screens/new_password.dart';
 import 'package:flutter_vinet/modules/otp/screens/otp_screen.dart';
 import 'package:flutter_vinet/modules/register/screens/register_screen.dart';
+import 'package:flutter_vinet/modules/register/screens/register_success.dart';
 import 'package:flutter_vinet/modules/splash/screens/splash_screen.dart';
 import 'package:flutter_vinet/modules/walkthrough/screens/walkthrough_1.dart';
 import 'package:flutter_vinet/modules/walkthrough/screens/walkthrough_2.dart';
@@ -31,9 +35,17 @@ class Routes {
       case '/login':
         return PageTransition(child: LoginScreen(), type: PageTransitionType.bottomToTop);
       case '/register':
-        return PageTransition(child: RegisterScreen(), type: PageTransitionType.bottomToTop,duration: Duration(milliseconds: 200));
+        return PageTransition(child: RegisterScreen(), type: PageTransitionType.bottomToTop, duration: Duration(milliseconds: 200));
       case '/otp':
         return PageTransition(child: OTPScreen(), type: PageTransitionType.rightToLeft);
+      case '/register-success':
+        return PageTransition(child: RegisterSuccess(), type: PageTransitionType.rightToLeft);
+      case '/fpassword':
+        return PageTransition(child: ForgotPassword(), type: PageTransitionType.rightToLeft);
+      case '/fpassword-otp':
+        return PageTransition(child: ForgotOTP(), type: PageTransitionType.rightToLeft);
+      case '/new-password':
+        return PageTransition(child: NewPassword(), type: PageTransitionType.rightToLeft);
       default:
         return _errorRoute();
     }

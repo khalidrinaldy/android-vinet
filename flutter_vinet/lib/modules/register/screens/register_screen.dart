@@ -19,6 +19,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     return ChangeNotifierProvider(
       create: (context) => RegisterProvider(),
       child: Scaffold(
+        backgroundColor: Color(myColors.secondaryWhiteScreen()),
         body: ListView(
           children: [
             registerForm(),
@@ -34,6 +35,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     return Consumer<RegisterProvider>(
       builder: (context, registerProvider, _) => Form(
         key: formGlobalKey,
+        autovalidateMode: AutovalidateMode.always,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -205,7 +207,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         return null;
                       }
                       return "Password and Confirm Password must be match";
-                    }
+                    },
                   ),
                 ],
               ),
@@ -223,12 +225,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            widgets.buttonSubmitGreen(callback: () {
-              if (formGlobalKey.currentState!.validate()) {
-                formGlobalKey.currentState!.save();
-                registerProvider.onSubmit(context);
-              }
-            }),
+            widgets.buttonSubmitGreen(
+              text: "Sign Up",
+              callback: () {
+                if (formGlobalKey.currentState!.validate()) {
+                  formGlobalKey.currentState!.save();
+                  registerProvider.onSubmit(context);
+                }
+              },
+            ),
           ],
         ),
       ),

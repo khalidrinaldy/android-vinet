@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class RegisterProvider with ChangeNotifier, FormValidation {
   TextEditingController? nameController = TextEditingController();
@@ -14,8 +15,11 @@ class RegisterProvider with ChangeNotifier, FormValidation {
     notifyListeners();
   }
 
-  void onSubmit(BuildContext context){
-    Navigator.pushNamed(context, '/otp');
+  void onSubmit(BuildContext context) {
+    Navigator.pushNamed(
+      context,
+      '/otp',
+    );
   }
 
   VoidCallback? goToLogin(BuildContext context) => () => {Navigator.pushNamedAndRemoveUntil(context, '/login', (route) => false)};

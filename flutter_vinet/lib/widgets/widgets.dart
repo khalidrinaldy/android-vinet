@@ -71,25 +71,30 @@ class Widgets {
       ),
       alignment: Alignment.center,
       child: ElevatedButton(
-        child: Icon(
-          Icons.arrow_forward,
-          size: 28,
-          color: Colors.white,
-        ),
-        style: ButtonStyle(
-          alignment: Alignment.center,
-          backgroundColor: MaterialStateProperty.all(
-            Color(myColors.primaryGreen()),
+          child: Icon(
+            Icons.arrow_forward,
+            size: 28,
+            color: Colors.white,
           ),
-          shape: MaterialStateProperty.all(CircleBorder()),
-          minimumSize: MaterialStateProperty.all(Size(double.infinity, double.infinity)),
-        ),
-        onPressed: callback
-      ),
+          style: ButtonStyle(
+            alignment: Alignment.center,
+            backgroundColor: MaterialStateProperty.all(
+              Color(myColors.primaryGreen()),
+            ),
+            shape: MaterialStateProperty.all(CircleBorder()),
+            minimumSize: MaterialStateProperty.all(Size(double.infinity, double.infinity)),
+          ),
+          onPressed: callback),
     );
   }
 
-  Widget textInput({TextEditingController? controller, bool? obscure, TextInputType? inputType ,String? Function(String?)? validator, Widget? icon}) {
+  Widget textInput({
+    TextEditingController? controller,
+    bool? obscure,
+    TextInputType? inputType,
+    String? Function(String?)? validator,
+    Widget? icon,
+  }) {
     return ConstrainedBox(
       constraints: BoxConstraints(
         maxHeight: 70,
@@ -132,7 +137,7 @@ class Widgets {
         ),
         textInputAction: TextInputAction.done,
         keyboardType: inputType,
-        validator: validator
+        validator: validator,
       ),
     );
   }
@@ -156,7 +161,7 @@ class Widgets {
       ),
       child: IntrinsicWidth(
         stepHeight: 10,
-        stepWidth: 10,
+        stepWidth: 2,
         child: TextField(
           controller: controller,
           style: TextStyle(
@@ -182,7 +187,7 @@ class Widgets {
     );
   }
 
-  Widget buttonSubmitGreen({VoidCallback? callback}) {
+  Widget buttonSubmitGreen({String? text, VoidCallback? callback}) {
     return Container(
       width: 288,
       height: 42,
@@ -208,7 +213,7 @@ class Widgets {
           ),
         ),
         child: Text(
-          "Submit",
+          text!,
           style: TextStyle(
             fontFamily: "Rubik",
             fontSize: 18,
@@ -218,6 +223,29 @@ class Widgets {
         ),
         onPressed: callback,
       ),
+    );
+  }
+
+  Widget buttonWhenPressed() {
+    return Container(
+      width: 288,
+      height: 42,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: Color(myColors.darkGreen()).withOpacity(0.7),
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: <BoxShadow>[
+          BoxShadow(
+            blurRadius: 4,
+            spreadRadius: 0,
+            offset: Offset(0, 4),
+            color: Colors.black.withOpacity(0.25),
+          ),
+        ],
+      ),
+      child: CircularProgressIndicator(
+        color: Color(myColors.secondaryTextColor()),
+      )
     );
   }
 
@@ -232,7 +260,7 @@ class Widgets {
           BoxShadow(
             blurRadius: 4,
             spreadRadius: -3,
-            offset: Offset(0,2),
+            offset: Offset(0, 2),
             color: Colors.black.withOpacity(0.25),
           ),
         ],
