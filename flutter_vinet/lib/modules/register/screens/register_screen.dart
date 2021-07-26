@@ -12,7 +12,6 @@ class RegisterScreen extends StatefulWidget {
 
 class _RegisterScreenState extends State<RegisterScreen> {
   final widgets = Widgets();
-  final formGlobalKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -34,8 +33,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Widget registerForm() {
     return Consumer<RegisterProvider>(
       builder: (context, registerProvider, _) => Form(
-        key: formGlobalKey,
-        autovalidateMode: AutovalidateMode.always,
+        key: registerProvider.formGlobalKey,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -225,15 +223,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            widgets.buttonSubmitGreen(
-              text: "Sign Up",
-              callback: () {
-                if (formGlobalKey.currentState!.validate()) {
-                  formGlobalKey.currentState!.save();
-                  registerProvider.onSubmit(context);
-                }
-              },
-            ),
+            registerProvider.submitted
+                ? widgets.buttonWhenPressed()
+                : widgets.buttonSubmitGreen(
+                    text: "Sign Up",
+                    callback: () => registerProvider.onSubmit(context),
+                  ),
           ],
         ),
       ),

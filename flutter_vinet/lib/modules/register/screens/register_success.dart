@@ -54,7 +54,7 @@ class RegisterSuccess extends StatelessWidget {
               margin: EdgeInsets.only(top: 35),
               child: Widgets().buttonSubmitGreen(
                 text: "Proceed",
-                callback: () {},
+                callback: () => Navigator.pushNamedAndRemoveUntil(context, '/login', (route) => false),
               ),
             )
           ],
