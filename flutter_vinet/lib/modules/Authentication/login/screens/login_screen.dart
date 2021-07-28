@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_vinet/modules/login/providers/login_provider.dart';
+import 'package:flutter_vinet/modules/Authentication/login/providers/login_provider.dart';
 import 'package:flutter_vinet/widgets/widgets.dart';
 import 'package:provider/provider.dart';
 
@@ -202,7 +202,7 @@ class LoginScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Widgets().arrowCircleButton(
-              callback: () => loginProvider.onLogin(),
+              callback: () => loginProvider.onLogin(context),
             ),
           ],
         ),

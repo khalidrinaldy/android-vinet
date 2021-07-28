@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_vinet/modules/login/providers/login_provider.dart';
+import 'package:flutter_vinet/modules/Authentication/login/providers/login_provider.dart';
 import 'package:flutter_vinet/widgets/widgets.dart';
 import 'package:provider/provider.dart';
 

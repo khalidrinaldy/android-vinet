@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_vinet/modules/splash/services/splash_services.dart';
+import 'package:flutter_vinet/modules/Starter/splash/services/splash_services.dart';
 
 class SplashScreen extends StatefulWidget {
   @override

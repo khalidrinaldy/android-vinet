@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vinet/config/routes/routes.dart';
-import 'package:flutter_vinet/modules/splash/screens/splash_screen.dart';
+import 'package:flutter_vinet/modules/Starter/splash/screens/splash_screen.dart';
 
 void main() {
   runApp(MyApp());

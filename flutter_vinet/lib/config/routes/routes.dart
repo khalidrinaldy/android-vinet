@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_vinet/modules/login/screens/forgot_otp.dart';
-import 'package:flutter_vinet/modules/login/screens/forgot_password.dart';
-import 'package:flutter_vinet/modules/login/screens/login_screen.dart';
-import 'package:flutter_vinet/modules/login/screens/new_password.dart';
-import 'package:flutter_vinet/modules/otp/screens/otp_screen.dart';
-import 'package:flutter_vinet/modules/register/screens/register_screen.dart';
-import 'package:flutter_vinet/modules/register/screens/register_success.dart';
-import 'package:flutter_vinet/modules/splash/screens/splash_screen.dart';
-import 'package:flutter_vinet/modules/walkthrough/screens/walkthrough_1.dart';
-import 'package:flutter_vinet/modules/walkthrough/screens/walkthrough_2.dart';
-import 'package:flutter_vinet/modules/walkthrough/screens/walkthrough_3.dart';
+import 'package:flutter_vinet/modules/Authentication/login/screens/forgot_otp.dart';
+import 'package:flutter_vinet/modules/Authentication/login/screens/forgot_password.dart';
+import 'package:flutter_vinet/modules/Authentication/login/screens/login_screen.dart';
+import 'package:flutter_vinet/modules/Authentication/login/screens/new_password.dart';
+import 'package:flutter_vinet/modules/Authentication/otp/screens/otp_screen.dart';
+import 'package:flutter_vinet/modules/Authentication/register/screens/register_screen.dart';
+import 'package:flutter_vinet/modules/Authentication/register/screens/register_success.dart';
+import 'package:flutter_vinet/modules/Main%20Menu/main_menu.dart';
+import 'package:flutter_vinet/modules/Starter/splash/screens/splash_screen.dart';
+import 'package:flutter_vinet/modules/Starter/walkthrough/screens/walkthrough_1.dart';
+import 'package:flutter_vinet/modules/Starter/walkthrough/screens/walkthrough_2.dart';
+import 'package:flutter_vinet/modules/Starter/walkthrough/screens/walkthrough_3.dart';
 import 'package:page_transition/page_transition.dart';
 
 class Routes {
@@ -46,6 +47,8 @@ class Routes {
         return PageTransition(child: ForgotOTP(), type: PageTransitionType.rightToLeft);
       case '/new-password':
         return PageTransition(child: NewPassword(), type: PageTransitionType.rightToLeft);
+      case '/main-menu':
+        return PageTransition(child: MainMenu(), type: PageTransitionType.bottomToTop);
       default:
         return _errorRoute();
     }

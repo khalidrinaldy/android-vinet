@@ -1,0 +1,1032 @@
+[
+    {
+        "name": "SERVER PERMATA",
+        "ipNumber": "192.168.10.1",
+        "isOnline": true,
+        "cpuLoad": 45,
+        "ramLoad": 15,
+        "profitSinceLastTarget": 40,
+        "clientsLoad": 1000,
+        "tx": 50,
+        "rx": 500,
+        "customers": [
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": true,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": true,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": true,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": true,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": false,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": true,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            }
+        ],
+        "areas": [
+            {
+                "name": "TELAGA ASIH",
+                "ipNumber": "192.168.20.2",
+                "isConnected": true,
+                "download" : 70,
+                "upload": 30
+            },
+            {
+                "name": "TELAGA ASIH",
+                "ipNumber": "192.168.20.2",
+                "isConnected": false,
+                "download" : 70,
+                "upload": 30
+            },
+            {
+                "name": "TELAGA ASIH",
+                "ipNumber": "192.168.20.2",
+                "isConnected": true,
+                "download" : 70,
+                "upload": 30
+            },
+            {
+                "name": "TELAGA ASIH",
+                "ipNumber": "192.168.20.2",
+                "isConnected": true,
+                "download" : 70,
+                "upload": 30
+            }
+        ],
+        "payments": [
+            {
+                "name": "Rafika Amalia",
+                "paymentDate": "2021-07-27T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911",
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000
+            },
+            {
+                "name": "Rafika Amalia",
+                "paymentDate": "2021-07-27T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911",
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000
+            },
+            {
+                "name": "Rafika Amalia",
+                "paymentDate": "2021-07-27T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911",
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000
+            }
+        ],
+        "queue": [
+            {
+                "sender": "Rafika Amalia",
+                "date": "2021-07-27T13:37:27+00:00",
+                "packetType":"Standard",
+                "packetSpeed":10,
+                "area": "Telaga Asih",
+                "address":"Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "sender": "Rafika Amalia",
+                "date": "2021-07-27T13:37:27+00:00",
+                "packetType":"Standard",
+                "packetSpeed":10,
+                "area": "Telaga Asih",
+                "address":"Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "sender": "Rafika Amalia",
+                "date": "2021-07-27T13:37:27+00:00",
+                "packetType":"Standard",
+                "packetSpeed":10,
+                "area": "Telaga Asih",
+                "address":"Permata Regensi",
+                "phone": "085839951911"
+            }
+        ],
+        "income": {
+            "month": "June",
+            "year": 2021,
+            "totalBill": 162000000,
+            "unPaid": 130000000,
+            "paid": 32000000,
+            "tax": 690000,
+            "managedServices": 700000
+        }
+    },
+    {
+        "name": "SERVER DISTRIBUSI",
+        "ipNumber": "192.168.10.2",
+        "isOnline": true,
+        "cpuLoad": 45,
+        "ramLoad": 15,
+        "profitSinceLastTarget": 40,
+        "clientsLoad": 1000,
+        "tx": 50,
+        "rx": 500,
+        "customers": [
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": true,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": true,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": true,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": true,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": false,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": true,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            }
+        ],
+        "areas": [
+            {
+                "name": "TELAGA ASIH",
+                "ipNumber": "192.168.20.2",
+                "isConnected": true,
+                "download" : 70,
+                "upload": 30
+            },
+            {
+                "name": "TELAGA ASIH",
+                "ipNumber": "192.168.20.2",
+                "isConnected": false,
+                "download" : 70,
+                "upload": 30
+            },
+            {
+                "name": "TELAGA ASIH",
+                "ipNumber": "192.168.20.2",
+                "isConnected": true,
+                "download" : 70,
+                "upload": 30
+            },
+            {
+                "name": "TELAGA ASIH",
+                "ipNumber": "192.168.20.2",
+                "isConnected": true,
+                "download" : 70,
+                "upload": 30
+            }
+        ],
+        "payments": [
+            {
+                "name": "Rafika Amalia",
+                "paymentDate": "2021-07-27T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911",
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000
+            },
+            {
+                "name": "Rafika Amalia",
+                "paymentDate": "2021-07-27T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911",
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000
+            },
+            {
+                "name": "Rafika Amalia",
+                "paymentDate": "2021-07-27T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911",
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000
+            }
+        ],
+        "queue": [
+            {
+                "sender": "Rafika Amalia",
+                "date": "2021-07-27T13:37:27+00:00",
+                "packetType":"Standard",
+                "packetSpeed":10,
+                "area": "Telaga Asih",
+                "address":"Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "sender": "Rafika Amalia",
+                "date": "2021-07-27T13:37:27+00:00",
+                "packetType":"Standard",
+                "packetSpeed":10,
+                "area": "Telaga Asih",
+                "address":"Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "sender": "Rafika Amalia",
+                "date": "2021-07-27T13:37:27+00:00",
+                "packetType":"Standard",
+                "packetSpeed":10,
+                "area": "Telaga Asih",
+                "address":"Permata Regensi",
+                "phone": "085839951911"
+            }
+        ],
+        "income": {
+            "month": "June",
+            "year": 2021,
+            "totalBill": 162000000,
+            "unPaid": 130000000,
+            "paid": 32000000,
+            "tax": 690000,
+            "managedServices": 700000
+        }
+    },
+    {
+        "name": "SERVER BENGROD",
+        "ipNumber": "192.168.10.3",
+        "isOnline": true,
+        "cpuLoad": 45,
+        "ramLoad": 15,
+        "profitSinceLastTarget": 40,
+        "clientsLoad": 1000,
+        "tx": 50,
+        "rx": 500,
+        "customers": [
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": true,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": true,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": true,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": true,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": false,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": true,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            }
+        ],
+        "areas": [
+            {
+                "name": "TELAGA ASIH",
+                "ipNumber": "192.168.20.2",
+                "isConnected": true,
+                "download" : 70,
+                "upload": 30
+            },
+            {
+                "name": "TELAGA ASIH",
+                "ipNumber": "192.168.20.2",
+                "isConnected": false,
+                "download" : 70,
+                "upload": 30
+            },
+            {
+                "name": "TELAGA ASIH",
+                "ipNumber": "192.168.20.2",
+                "isConnected": true,
+                "download" : 70,
+                "upload": 30
+            },
+            {
+                "name": "TELAGA ASIH",
+                "ipNumber": "192.168.20.2",
+                "isConnected": true,
+                "download" : 70,
+                "upload": 30
+            }
+        ],
+        "payments": [
+            {
+                "name": "Rafika Amalia",
+                "paymentDate": "2021-07-27T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911",
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000
+            },
+            {
+                "name": "Rafika Amalia",
+                "paymentDate": "2021-07-27T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911",
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000
+            },
+            {
+                "name": "Rafika Amalia",
+                "paymentDate": "2021-07-27T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911",
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000
+            }
+        ],
+        "queue": [
+            {
+                "sender": "Rafika Amalia",
+                "date": "2021-07-27T13:37:27+00:00",
+                "packetType":"Standard",
+                "packetSpeed":10,
+                "area": "Telaga Asih",
+                "address":"Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "sender": "Rafika Amalia",
+                "date": "2021-07-27T13:37:27+00:00",
+                "packetType":"Standard",
+                "packetSpeed":10,
+                "area": "Telaga Asih",
+                "address":"Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "sender": "Rafika Amalia",
+                "date": "2021-07-27T13:37:27+00:00",
+                "packetType":"Standard",
+                "packetSpeed":10,
+                "area": "Telaga Asih",
+                "address":"Permata Regensi",
+                "phone": "085839951911"
+            }
+        ],
+        "income": {
+            "month": "June",
+            "year": 2021,
+            "totalBill": 162000000,
+            "unPaid": 130000000,
+            "paid": 32000000,
+            "tax": 690000,
+            "managedServices": 700000
+        }
+    },
+    {
+        "name": "SERVER MUKTIWARI",
+        "ipNumber": "192.168.10.4",
+        "isOnline": true,
+        "cpuLoad": 45,
+        "ramLoad": 15,
+        "profitSinceLastTarget": 40,
+        "clientsLoad": 1000,
+        "tx": 50,
+        "rx": 500,
+        "customers": [
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": true,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": true,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": true,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": true,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": false,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": true,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            }
+        ],
+        "areas": [
+            {
+                "name": "TELAGA ASIH",
+                "ipNumber": "192.168.20.2",
+                "isConnected": true,
+                "download" : 70,
+                "upload": 30
+            },
+            {
+                "name": "TELAGA ASIH",
+                "ipNumber": "192.168.20.2",
+                "isConnected": false,
+                "download" : 70,
+                "upload": 30
+            },
+            {
+                "name": "TELAGA ASIH",
+                "ipNumber": "192.168.20.2",
+                "isConnected": true,
+                "download" : 70,
+                "upload": 30
+            },
+            {
+                "name": "TELAGA ASIH",
+                "ipNumber": "192.168.20.2",
+                "isConnected": true,
+                "download" : 70,
+                "upload": 30
+            }
+        ],
+        "payments": [
+            {
+                "name": "Rafika Amalia",
+                "paymentDate": "2021-07-27T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911",
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000
+            },
+            {
+                "name": "Rafika Amalia",
+                "paymentDate": "2021-07-27T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911",
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000
+            },
+            {
+                "name": "Rafika Amalia",
+                "paymentDate": "2021-07-27T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911",
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000
+            }
+        ],
+        "queue": [
+            {
+                "sender": "Rafika Amalia",
+                "date": "2021-07-27T13:37:27+00:00",
+                "packetType":"Standard",
+                "packetSpeed":10,
+                "area": "Telaga Asih",
+                "address":"Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "sender": "Rafika Amalia",
+                "date": "2021-07-27T13:37:27+00:00",
+                "packetType":"Standard",
+                "packetSpeed":10,
+                "area": "Telaga Asih",
+                "address":"Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "sender": "Rafika Amalia",
+                "date": "2021-07-27T13:37:27+00:00",
+                "packetType":"Standard",
+                "packetSpeed":10,
+                "area": "Telaga Asih",
+                "address":"Permata Regensi",
+                "phone": "085839951911"
+            }
+        ],
+        "income": {
+            "month": "June",
+            "year": 2021,
+            "totalBill": 162000000,
+            "unPaid": 130000000,
+            "paid": 32000000,
+            "tax": 690000,
+            "managedServices": 700000
+        }
+    },
+    {
+        "name": "SERVER ARINET",
+        "ipNumber": "192.168.10.5",
+        "isOnline": true,
+        "cpuLoad": 45,
+        "ramLoad": 15,
+        "profitSinceLastTarget": 40,
+        "clientsLoad": 1000,
+        "tx": 50,
+        "rx": 500,
+        "customers": [
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": true,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": true,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": true,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": true,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": false,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "name": "Rafika Amalia",
+                "id": "VN130100",
+                "ipNumber": "192.168.40.1",
+                "isConnected": true,
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000,
+                "upload": 5,
+                "download": 8,
+                "isPaid": true,
+                "type": "USERS",
+                "joinDate": "2014-03-12T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911"
+            }
+        ],
+        "areas": [
+            {
+                "name": "TELAGA ASIH",
+                "ipNumber": "192.168.20.2",
+                "isConnected": true,
+                "download" : 70,
+                "upload": 30
+            },
+            {
+                "name": "TELAGA ASIH",
+                "ipNumber": "192.168.20.2",
+                "isConnected": false,
+                "download" : 70,
+                "upload": 30
+            },
+            {
+                "name": "TELAGA ASIH",
+                "ipNumber": "192.168.20.2",
+                "isConnected": true,
+                "download" : 70,
+                "upload": 30
+            },
+            {
+                "name": "TELAGA ASIH",
+                "ipNumber": "192.168.20.2",
+                "isConnected": true,
+                "download" : 70,
+                "upload": 30
+            }
+        ],
+        "payments": [
+            {
+                "name": "Rafika Amalia",
+                "paymentDate": "2021-07-27T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911",
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000
+            },
+            {
+                "name": "Rafika Amalia",
+                "paymentDate": "2021-07-27T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911",
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000
+            },
+            {
+                "name": "Rafika Amalia",
+                "paymentDate": "2021-07-27T13:37:27+00:00",
+                "address": "Permata Regensi",
+                "phone": "085839951911",
+                "packetType": "Standard",
+                "packetSpeed": 10,
+                "packetPrice": 165000
+            }
+        ],
+        "queue": [
+            {
+                "sender": "Rafika Amalia",
+                "date": "2021-07-27T13:37:27+00:00",
+                "packetType":"Standard",
+                "packetSpeed":10,
+                "area": "Telaga Asih",
+                "address":"Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "sender": "Rafika Amalia",
+                "date": "2021-07-27T13:37:27+00:00",
+                "packetType":"Standard",
+                "packetSpeed":10,
+                "area": "Telaga Asih",
+                "address":"Permata Regensi",
+                "phone": "085839951911"
+            },
+            {
+                "sender": "Rafika Amalia",
+                "date": "2021-07-27T13:37:27+00:00",
+                "packetType":"Standard",
+                "packetSpeed":10,
+                "area": "Telaga Asih",
+                "address":"Permata Regensi",
+                "phone": "085839951911"
+            }
+        ],
+        "income": {
+            "month": "June",
+            "year": 2021,
+            "totalBill": 162000000,
+            "unPaid": 130000000,
+            "paid": 32000000,
+            "tax": 690000,
+            "managedServices": 700000
+        }
+    }
+]

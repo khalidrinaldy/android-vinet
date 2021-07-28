@@ -73,9 +73,10 @@ class LoginProvider with ChangeNotifier, FormValidation {
     }
   }
 
-  void onLogin() {
+  void onLogin(BuildContext context) {
     if (this.formGlobalKey.currentState!.validate()) {
       this.formGlobalKey.currentState!.save();
+      Navigator.pushNamedAndRemoveUntil(context, '/main-menu', (route) => false);
     }
   }
 }

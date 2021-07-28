@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vinet/config/themes/mycolors.dart';
-import 'package:flutter_vinet/modules/walkthrough/services/walkthrough_service.dart';
+import 'package:flutter_vinet/modules/Starter/walkthrough/services/walkthrough_service.dart';
 import 'package:flutter_vinet/widgets/widgets.dart';
 
 class WalkThrough3 extends StatelessWidget {
