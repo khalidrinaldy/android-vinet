@@ -1,7 +1,7 @@
 class Payment {
   //Information
   String? name;
-  DateTime? paymentDate;
+  String? paymentDate;
   String? address;
   String? phone;
 

@@ -1,3 +1,6 @@
+import 'package:intl/intl.dart';
+
+final moneyFormat = new NumberFormat("#,##0", "en_US");
 class Income {
   //Date
   String? month;
@@ -11,8 +14,8 @@ class Income {
   int? managedServices;
 
   //get Income
-  int? getIncome() {
-    return this.paid! - (this.tax! + this.managedServices!);
+  String? getIncome() {
+    return "Rp.${moneyFormat.format(this.paid! - (this.tax! + this.managedServices!))}";
   }
 
   Income(

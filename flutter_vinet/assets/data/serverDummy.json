@@ -1,14 +1,16 @@
 [
     {
-        "name": "SERVER PERMATA",
-        "ipNumber": "192.168.10.1",
-        "isOnline": true,
-        "cpuLoad": 45,
-        "ramLoad": 15,
-        "profitSinceLastTarget": 40,
-        "clientsLoad": 1000,
-        "tx": 50.0,
-        "rx": 500.0,
+        "info": {
+            "name": "SERVER PERMATA",
+            "ipNumber": "192.168.10.1",
+            "isOnline": true,
+            "cpuLoad": 45,
+            "ramLoad": 15,
+            "profitSinceLastTarget": 40,
+            "clientsLoad": 1000,
+            "tx": 50.0,
+            "rx": 500.0
+        },
         "customers": [
             {
                 "name": "Rafika Amalia",
@@ -18,8 +20,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": true,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -34,8 +36,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": true,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -50,8 +52,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": true,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -66,8 +68,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": true,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -82,8 +84,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": false,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -98,8 +100,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": true,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -112,29 +114,29 @@
                 "name": "TELAGA ASIH",
                 "ipNumber": "192.168.20.2",
                 "isConnected": true,
-                "download": 70.0,
-                "upload": 30.0
+                "download": 70,
+                "upload": 30
             },
             {
                 "name": "TELAGA ASIH",
                 "ipNumber": "192.168.20.2",
                 "isConnected": false,
-                "download": 70.0,
-                "upload": 30.0
+                "download": 70,
+                "upload": 30
             },
             {
                 "name": "TELAGA ASIH",
                 "ipNumber": "192.168.20.2",
                 "isConnected": true,
-                "download": 70.0,
-                "upload": 30.0
+                "download": 70,
+                "upload": 30
             },
             {
                 "name": "TELAGA ASIH",
                 "ipNumber": "192.168.20.2",
                 "isConnected": true,
-                "download": 70.0,
-                "upload": 30.0
+                "download": 70,
+                "upload": 30
             }
         ],
         "payments": [
@@ -170,28 +172,28 @@
             {
                 "sender": "Rafika Amalia",
                 "date": "2021-07-27T13:37:27+00:00",
-                "packetType":"Standard",
-                "packetSpeed":10,
+                "packetType": "Standard",
+                "packetSpeed": 10,
                 "area": "Telaga Asih",
-                "address":"Permata Regensi",
+                "address": "Permata Regensi",
                 "phone": "085839951911"
             },
             {
                 "sender": "Rafika Amalia",
                 "date": "2021-07-27T13:37:27+00:00",
-                "packetType":"Standard",
-                "packetSpeed":10,
+                "packetType": "Standard",
+                "packetSpeed": 10,
                 "area": "Telaga Asih",
-                "address":"Permata Regensi",
+                "address": "Permata Regensi",
                 "phone": "085839951911"
             },
             {
                 "sender": "Rafika Amalia",
                 "date": "2021-07-27T13:37:27+00:00",
-                "packetType":"Standard",
-                "packetSpeed":10,
+                "packetType": "Standard",
+                "packetSpeed": 10,
                 "area": "Telaga Asih",
-                "address":"Permata Regensi",
+                "address": "Permata Regensi",
                 "phone": "085839951911"
             }
         ],
@@ -206,15 +208,17 @@
         }
     },
     {
-        "name": "SERVER DISTRIBUSI",
-        "ipNumber": "192.168.10.2",
-        "isOnline": true,
-        "cpuLoad": 45,
-        "ramLoad": 15,
-        "profitSinceLastTarget": 40,
-        "clientsLoad": 1000,
-        "tx": 50.0,
-        "rx": 500.0,
+        "info": {
+            "name": "SERVER DISTRIBUSI",
+            "ipNumber": "192.168.10.2",
+            "isOnline": true,
+            "cpuLoad": 45,
+            "ramLoad": 15,
+            "profitSinceLastTarget": 40,
+            "clientsLoad": 1000,
+            "tx": 50.0,
+            "rx": 500.0
+        },
         "customers": [
             {
                 "name": "Rafika Amalia",
@@ -224,8 +228,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": true,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -240,8 +244,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": true,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -256,8 +260,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": true,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -272,8 +276,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": true,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -288,8 +292,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": false,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -304,8 +308,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": true,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -318,29 +322,29 @@
                 "name": "TELAGA ASIH",
                 "ipNumber": "192.168.20.2",
                 "isConnected": true,
-                "download": 70.0,
-                "upload": 30.0
+                "download": 70,
+                "upload": 30
             },
             {
                 "name": "TELAGA ASIH",
                 "ipNumber": "192.168.20.2",
                 "isConnected": false,
-                "download": 70.0,
-                "upload": 30.0
+                "download": 70,
+                "upload": 30
             },
             {
                 "name": "TELAGA ASIH",
                 "ipNumber": "192.168.20.2",
                 "isConnected": true,
-                "download": 70.0,
-                "upload": 30.0
+                "download": 70,
+                "upload": 30
             },
             {
                 "name": "TELAGA ASIH",
                 "ipNumber": "192.168.20.2",
                 "isConnected": true,
-                "download": 70.0,
-                "upload": 30.0
+                "download": 70,
+                "upload": 30
             }
         ],
         "payments": [
@@ -376,28 +380,28 @@
             {
                 "sender": "Rafika Amalia",
                 "date": "2021-07-27T13:37:27+00:00",
-                "packetType":"Standard",
-                "packetSpeed":10,
+                "packetType": "Standard",
+                "packetSpeed": 10,
                 "area": "Telaga Asih",
-                "address":"Permata Regensi",
+                "address": "Permata Regensi",
                 "phone": "085839951911"
             },
             {
                 "sender": "Rafika Amalia",
                 "date": "2021-07-27T13:37:27+00:00",
-                "packetType":"Standard",
-                "packetSpeed":10,
+                "packetType": "Standard",
+                "packetSpeed": 10,
                 "area": "Telaga Asih",
-                "address":"Permata Regensi",
+                "address": "Permata Regensi",
                 "phone": "085839951911"
             },
             {
                 "sender": "Rafika Amalia",
                 "date": "2021-07-27T13:37:27+00:00",
-                "packetType":"Standard",
-                "packetSpeed":10,
+                "packetType": "Standard",
+                "packetSpeed": 10,
                 "area": "Telaga Asih",
-                "address":"Permata Regensi",
+                "address": "Permata Regensi",
                 "phone": "085839951911"
             }
         ],
@@ -412,15 +416,17 @@
         }
     },
     {
-        "name": "SERVER BENGROD",
-        "ipNumber": "192.168.10.3",
-        "isOnline": true,
-        "cpuLoad": 45,
-        "ramLoad": 15,
-        "profitSinceLastTarget": 40,
-        "clientsLoad": 1000,
-        "tx": 50.0,
-        "rx": 500.0,
+        "info": {
+            "name": "SERVER BENGROD",
+            "ipNumber": "192.168.10.3",
+            "isOnline": true,
+            "cpuLoad": 45,
+            "ramLoad": 15,
+            "profitSinceLastTarget": 40,
+            "clientsLoad": 1000,
+            "tx": 50.0,
+            "rx": 500.0
+        },
         "customers": [
             {
                 "name": "Rafika Amalia",
@@ -430,8 +436,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": true,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -446,8 +452,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": true,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -462,8 +468,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": true,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -478,8 +484,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": true,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -494,8 +500,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": false,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -510,8 +516,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": true,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -524,29 +530,29 @@
                 "name": "TELAGA ASIH",
                 "ipNumber": "192.168.20.2",
                 "isConnected": true,
-                "download": 70.0,
-                "upload": 30.0
+                "download": 70,
+                "upload": 30
             },
             {
                 "name": "TELAGA ASIH",
                 "ipNumber": "192.168.20.2",
                 "isConnected": false,
-                "download": 70.0,
-                "upload": 30.0
+                "download": 70,
+                "upload": 30
             },
             {
                 "name": "TELAGA ASIH",
                 "ipNumber": "192.168.20.2",
                 "isConnected": true,
-                "download": 70.0,
-                "upload": 30.0
+                "download": 70,
+                "upload": 30
             },
             {
                 "name": "TELAGA ASIH",
                 "ipNumber": "192.168.20.2",
                 "isConnected": true,
-                "download": 70.0,
-                "upload": 30.0
+                "download": 70,
+                "upload": 30
             }
         ],
         "payments": [
@@ -582,28 +588,28 @@
             {
                 "sender": "Rafika Amalia",
                 "date": "2021-07-27T13:37:27+00:00",
-                "packetType":"Standard",
-                "packetSpeed":10,
+                "packetType": "Standard",
+                "packetSpeed": 10,
                 "area": "Telaga Asih",
-                "address":"Permata Regensi",
+                "address": "Permata Regensi",
                 "phone": "085839951911"
             },
             {
                 "sender": "Rafika Amalia",
                 "date": "2021-07-27T13:37:27+00:00",
-                "packetType":"Standard",
-                "packetSpeed":10,
+                "packetType": "Standard",
+                "packetSpeed": 10,
                 "area": "Telaga Asih",
-                "address":"Permata Regensi",
+                "address": "Permata Regensi",
                 "phone": "085839951911"
             },
             {
                 "sender": "Rafika Amalia",
                 "date": "2021-07-27T13:37:27+00:00",
-                "packetType":"Standard",
-                "packetSpeed":10,
+                "packetType": "Standard",
+                "packetSpeed": 10,
                 "area": "Telaga Asih",
-                "address":"Permata Regensi",
+                "address": "Permata Regensi",
                 "phone": "085839951911"
             }
         ],
@@ -618,15 +624,17 @@
         }
     },
     {
-        "name": "SERVER MUKTIWARI",
-        "ipNumber": "192.168.10.4",
-        "isOnline": true,
-        "cpuLoad": 45,
-        "ramLoad": 15,
-        "profitSinceLastTarget": 40,
-        "clientsLoad": 1000,
-        "tx": 50.0,
-        "rx": 500.0,
+        "info": {
+            "name": "SERVER MUKTIWARI",
+            "ipNumber": "192.168.10.4",
+            "isOnline": true,
+            "cpuLoad": 45,
+            "ramLoad": 15,
+            "profitSinceLastTarget": 40,
+            "clientsLoad": 1000,
+            "tx": 50.0,
+            "rx": 500.0
+        },
         "customers": [
             {
                 "name": "Rafika Amalia",
@@ -636,8 +644,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": true,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -652,8 +660,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": true,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -668,8 +676,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": true,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -684,8 +692,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": true,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -700,8 +708,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": false,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -716,8 +724,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": true,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -730,29 +738,29 @@
                 "name": "TELAGA ASIH",
                 "ipNumber": "192.168.20.2",
                 "isConnected": true,
-                "download": 70.0,
-                "upload": 30.0
+                "download": 70,
+                "upload": 30
             },
             {
                 "name": "TELAGA ASIH",
                 "ipNumber": "192.168.20.2",
                 "isConnected": false,
-                "download": 70.0,
-                "upload": 30.0
+                "download": 70,
+                "upload": 30
             },
             {
                 "name": "TELAGA ASIH",
                 "ipNumber": "192.168.20.2",
                 "isConnected": true,
-                "download": 70.0,
-                "upload": 30.0
+                "download": 70,
+                "upload": 30
             },
             {
                 "name": "TELAGA ASIH",
                 "ipNumber": "192.168.20.2",
                 "isConnected": true,
-                "download": 70.0,
-                "upload": 30.0
+                "download": 70,
+                "upload": 30
             }
         ],
         "payments": [
@@ -788,28 +796,28 @@
             {
                 "sender": "Rafika Amalia",
                 "date": "2021-07-27T13:37:27+00:00",
-                "packetType":"Standard",
-                "packetSpeed":10,
+                "packetType": "Standard",
+                "packetSpeed": 10,
                 "area": "Telaga Asih",
-                "address":"Permata Regensi",
+                "address": "Permata Regensi",
                 "phone": "085839951911"
             },
             {
                 "sender": "Rafika Amalia",
                 "date": "2021-07-27T13:37:27+00:00",
-                "packetType":"Standard",
-                "packetSpeed":10,
+                "packetType": "Standard",
+                "packetSpeed": 10,
                 "area": "Telaga Asih",
-                "address":"Permata Regensi",
+                "address": "Permata Regensi",
                 "phone": "085839951911"
             },
             {
                 "sender": "Rafika Amalia",
                 "date": "2021-07-27T13:37:27+00:00",
-                "packetType":"Standard",
-                "packetSpeed":10,
+                "packetType": "Standard",
+                "packetSpeed": 10,
                 "area": "Telaga Asih",
-                "address":"Permata Regensi",
+                "address": "Permata Regensi",
                 "phone": "085839951911"
             }
         ],
@@ -824,15 +832,17 @@
         }
     },
     {
-        "name": "SERVER ARINET",
-        "ipNumber": "192.168.10.5",
-        "isOnline": true,
-        "cpuLoad": 45,
-        "ramLoad": 15,
-        "profitSinceLastTarget": 40,
-        "clientsLoad": 1000,
-        "tx": 50.0,
-        "rx": 500.0,
+        "info": {
+            "name": "SERVER ARINET",
+            "ipNumber": "192.168.10.5",
+            "isOnline": true,
+            "cpuLoad": 45,
+            "ramLoad": 15,
+            "profitSinceLastTarget": 40,
+            "clientsLoad": 1000,
+            "tx": 50.0,
+            "rx": 500.0
+        },
         "customers": [
             {
                 "name": "Rafika Amalia",
@@ -842,8 +852,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": true,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -858,8 +868,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": true,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -874,8 +884,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": true,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -890,8 +900,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": true,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -906,8 +916,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": false,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -922,8 +932,8 @@
                 "packetType": "Standard",
                 "packetSpeed": 10,
                 "packetPrice": 165000,
-                "upload": 5.0,
-                "download": 8.0,
+                "upload": 5,
+                "download": 8,
                 "isPaid": true,
                 "type": "USERS",
                 "joinDate": "2014-03-12T13:37:27+00:00",
@@ -936,29 +946,29 @@
                 "name": "TELAGA ASIH",
                 "ipNumber": "192.168.20.2",
                 "isConnected": true,
-                "download": 70.0,
-                "upload": 30.0
+                "download": 70,
+                "upload": 30
             },
             {
                 "name": "TELAGA ASIH",
                 "ipNumber": "192.168.20.2",
                 "isConnected": false,
-                "download": 70.0,
-                "upload": 30.0
+                "download": 70,
+                "upload": 30
             },
             {
                 "name": "TELAGA ASIH",
                 "ipNumber": "192.168.20.2",
                 "isConnected": true,
-                "download": 70.0,
-                "upload": 30.0
+                "download": 70,
+                "upload": 30
             },
             {
                 "name": "TELAGA ASIH",
                 "ipNumber": "192.168.20.2",
                 "isConnected": true,
-                "download": 70.0,
-                "upload": 30.0
+                "download": 70,
+                "upload": 30
             }
         ],
         "payments": [
@@ -994,28 +1004,28 @@
             {
                 "sender": "Rafika Amalia",
                 "date": "2021-07-27T13:37:27+00:00",
-                "packetType":"Standard",
-                "packetSpeed":10,
+                "packetType": "Standard",
+                "packetSpeed": 10,
                 "area": "Telaga Asih",
-                "address":"Permata Regensi",
+                "address": "Permata Regensi",
                 "phone": "085839951911"
             },
             {
                 "sender": "Rafika Amalia",
                 "date": "2021-07-27T13:37:27+00:00",
-                "packetType":"Standard",
-                "packetSpeed":10,
+                "packetType": "Standard",
+                "packetSpeed": 10,
                 "area": "Telaga Asih",
-                "address":"Permata Regensi",
+                "address": "Permata Regensi",
                 "phone": "085839951911"
             },
             {
                 "sender": "Rafika Amalia",
                 "date": "2021-07-27T13:37:27+00:00",
-                "packetType":"Standard",
-                "packetSpeed":10,
+                "packetType": "Standard",
+                "packetSpeed": 10,
                 "area": "Telaga Asih",
-                "address":"Permata Regensi",
+                "address": "Permata Regensi",
                 "phone": "085839951911"
             }
         ],

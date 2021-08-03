@@ -32,6 +32,9 @@ dependencies:
   url_launcher: ^6.0.9
   intl: ^0.17.0
   fancy_bottom_navigation: ^0.3.3
+  percent_indicator: ^3.0.1
+  fl_chart: ^0.36.3
+  syncfusion_flutter_charts: ^19.2.49
 
 dev_dependencies:
   flutter_test:
@@ -61,6 +64,7 @@ flutter:
     - assets/images/area/
     - assets/images/payment/
     - assets/images/queue/
+    - assets/data/dummy.json
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

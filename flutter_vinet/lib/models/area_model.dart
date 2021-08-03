@@ -2,8 +2,8 @@ class Area {
   String? name;
   String? ipNumber;
   bool? isConnected;
-  int? download;
-  int? upload;
+  double? download;
+  double? upload;
 
   Area({this.name, this.ipNumber, this.isConnected, this.download, this.upload});
 

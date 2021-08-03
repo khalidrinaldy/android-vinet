@@ -16,7 +16,7 @@ class Customer {
 
   //Information
   String? type;
-  DateTime? joinDate;
+  String? joinDate;
   String? address;
   String? phone;
 

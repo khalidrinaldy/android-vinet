@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vinet/config/routes/routes.dart';
+import 'package:flutter_vinet/modules/Main%20Menu/main_menu.dart';
 import 'package:flutter_vinet/modules/Starter/splash/screens/splash_screen.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SplashScreen(),
+      home: MainMenu(),
       onGenerateRoute: Routes.generateRoute,
       debugShowCheckedModeBanner: false,
     );

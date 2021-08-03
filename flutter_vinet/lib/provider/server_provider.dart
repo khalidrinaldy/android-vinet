@@ -1,23 +1,36 @@
+import 'dart:async';
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_vinet/models/server_model.dart';
 
-class ServerProvider with ChangeNotifier{
-  List<Map<String, dynamic>>? servers;
+class ServerProvider with ChangeNotifier {
+  int? choosedIndex = 0;
+  List<Server>? servers = [];
 
-  getServerData() async {
-    var response = await rootBundle.loadString("assets/data/dummy.json");
-    var jsonData = jsonDecode(response);
-
-    for (var s in jsonData) {
-      servers!.add(s);
-    }
-
+  chooseServer(int value) {
+    this.choosedIndex = value;
     notifyListeners();
   }
 
-  ServerProvider() {
-    getServerData();
+  getServerList() async {
+    var response = await rootBundle.loadString("assets/data/dummy.json");
+    List<dynamic> jsonData = json.decode(response);
+
+    for (var i = 0; i < jsonData.length; i++) {
+      Server server = Server.fromJson(jsonData[i]);
+      servers!.add(server);
+    }
+    notifyListeners();
+    return servers;
   }
+
+  Stream streamServers(Duration refreshTime) async* {
+    while (true) {
+      await Future.delayed(refreshTime);
+      yield await getServerList();
+    }
+  }
+
+  ServerProvider() {}
 }
