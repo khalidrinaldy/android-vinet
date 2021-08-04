@@ -29,6 +29,7 @@ class MyColors {
   int darkRed() => 0xFFB71C1C;
   //Blue
   int primaryBlue() => 0xFF3FACBD;
+  int secondaryBlue() => 0xFF80D7EB;
 
   //Grey
   int primaryGrey() => 0xFF97AFB9;
