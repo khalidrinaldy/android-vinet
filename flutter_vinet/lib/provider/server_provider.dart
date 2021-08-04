@@ -32,5 +32,7 @@ class ServerProvider with ChangeNotifier {
     }
   }
 
-  ServerProvider() {}
+  ServerProvider() {
+    getServerList();
+  }
 }
