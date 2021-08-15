@@ -7,6 +7,7 @@ import 'package:flutter_vinet/models/server_model.dart';
 class ServerProvider with ChangeNotifier {
   int? choosedIndex = 0;
   List<Server>? servers = [];
+  bool? isLoaded = false;
 
   chooseServer(int value) {
     this.choosedIndex = value;
@@ -17,9 +18,12 @@ class ServerProvider with ChangeNotifier {
     var response = await rootBundle.loadString("assets/data/dummy.json");
     List<dynamic> jsonData = json.decode(response);
 
-    for (var i = 0; i < jsonData.length; i++) {
-      Server server = Server.fromJson(jsonData[i]);
-      servers!.add(server);
+    if (!isLoaded!) {
+      for (var i = 0; i < jsonData.length; i++) {
+        Server server = Server.fromJson(jsonData[i]);
+        servers!.add(server);
+      }
+      isLoaded = true;
     }
     notifyListeners();
     return servers;
@@ -32,7 +36,5 @@ class ServerProvider with ChangeNotifier {
     }
   }
 
-  ServerProvider() {
-    getServerList();
-  }
+  ServerProvider() {}
 }

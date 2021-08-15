@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_vinet/models/customer_model.dart';
 import 'package:flutter_vinet/modules/Authentication/login/screens/forgot_otp.dart';
 import 'package:flutter_vinet/modules/Authentication/login/screens/forgot_password.dart';
 import 'package:flutter_vinet/modules/Authentication/login/screens/login_screen.dart';
@@ -11,6 +12,12 @@ import 'package:flutter_vinet/modules/Starter/splash/screens/splash_screen.dart'
 import 'package:flutter_vinet/modules/Starter/walkthrough/screens/walkthrough_1.dart';
 import 'package:flutter_vinet/modules/Starter/walkthrough/screens/walkthrough_2.dart';
 import 'package:flutter_vinet/modules/Starter/walkthrough/screens/walkthrough_3.dart';
+import 'package:flutter_vinet/modules/Sub%20Menu/area/screens/area_screen.dart';
+import 'package:flutter_vinet/modules/Sub%20Menu/customers/screens/customer_screen.dart';
+import 'package:flutter_vinet/modules/Sub%20Menu/customers/screens/detailCustomer_screen.dart';
+import 'package:flutter_vinet/modules/Sub%20Menu/income/screens/income_screen.dart';
+import 'package:flutter_vinet/modules/Sub%20Menu/payment/screens/payment_screen.dart';
+import 'package:flutter_vinet/modules/Sub%20Menu/queue/screens/queue_screen.dart';
 import 'package:page_transition/page_transition.dart';
 
 class Routes {
@@ -49,6 +56,18 @@ class Routes {
         return PageTransition(child: NewPassword(), type: PageTransitionType.rightToLeft);
       case '/main-menu':
         return PageTransition(child: MainMenu(), type: PageTransitionType.bottomToTop);
+      case '/payments':
+        return PageTransition(child: PaymentScreen(), type: PageTransitionType.bottomToTop);
+      case '/queue':
+        return PageTransition(child: QueueScreen(), type: PageTransitionType.bottomToTop);
+      case '/area':
+        return PageTransition(child: AreaScreen(), type: PageTransitionType.bottomToTop);
+      case '/income':
+        return PageTransition(child: IncomeScreen(), type: PageTransitionType.bottomToTop);
+      case '/customers':
+        return PageTransition(child: CustomerScreen(), type: PageTransitionType.bottomToTop);
+      case '/detail-customer':
+        return PageTransition(child: DetailCustomer(customer: args as Customer,), type: PageTransitionType.bottomToTop);
       default:
         return _errorRoute();
     }

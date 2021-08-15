@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_vinet/models/server_model.dart';
 import 'package:flutter_vinet/provider/server_provider.dart';
 import 'package:flutter_vinet/widgets/widgets.dart';
 import 'package:provider/provider.dart';
@@ -12,6 +13,15 @@ class ServerScreen extends StatefulWidget {
 
 class _ServerScreenState extends State<ServerScreen> with TickerProviderStateMixin {
   List<bool>? showServers = [];
+  Future? futureServer;
+  List<Server>? servers;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    futureServer = Provider.of<ServerProvider>(context,listen: false).getServerList();
+  }
 
   void showContainer(int index) {
     setState(() {
@@ -21,16 +31,18 @@ class _ServerScreenState extends State<ServerScreen> with TickerProviderStateMix
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => ServerProvider(),
-      child: Consumer<ServerProvider>(
-        builder: (context, serverProvider, _) {
-          for (var i = 0; i < serverProvider.servers!.length; i++) {
-            showServers!.add(false);
-          }
-          return Scaffold(
-            backgroundColor: Color(myColors.secondaryWhiteScreen()),
-            body: Container(
+    return Scaffold(
+      backgroundColor: Color(myColors.secondaryWhiteScreen()),
+      body: FutureBuilder(
+        future: futureServer,
+        builder: (BuildContext context, AsyncSnapshot snapshot) {
+          if (snapshot.hasData) {
+            servers = snapshot.data;
+            print(servers!.length);
+            for (var i = 0; i < servers!.length; i++) {
+              showServers!.add(false);
+            }
+            return Container(
               height: MediaQuery.of(context).size.height,
               child: ListView(
                 shrinkWrap: true,
@@ -45,35 +57,39 @@ class _ServerScreenState extends State<ServerScreen> with TickerProviderStateMix
                       ),
                     ),
                   ),
-                  _buildServerList(serverProvider),
+                  _buildServerList(),
                   SizedBox(
                     height: 50,
                   ),
                 ],
               ),
-            ),
-          );
+            );
+          } else {
+            return Center(
+              child: CircularProgressIndicator(),
+            );
+          }
         },
       ),
     );
   }
 
-  Widget _buildServerList(ServerProvider serverProvider) {
+  Widget _buildServerList() {
     return ListView.builder(
       shrinkWrap: true,
       physics: NeverScrollableScrollPhysics(),
-      itemCount: serverProvider.servers!.length,
+      itemCount: servers!.length,
       itemBuilder: (context, index) {
         var paid = 0;
         var unpaid = 0;
-        serverProvider.servers!.elementAt(index).customers!.forEach((e) {
+        servers!.elementAt(index).customers!.forEach((e) {
           if (e.isPaid!) {
             paid += 1;
           } else {
             unpaid += 1;
           }
         });
-        var noData = serverProvider.servers!.elementAt(index).customers!.length - (paid + unpaid);
+        var noData = servers!.elementAt(index).customers!.length - (paid + unpaid);
         return Column(
           children: [
             Align(
@@ -124,8 +140,7 @@ class _ServerScreenState extends State<ServerScreen> with TickerProviderStateMix
                         TextSpan(
                           children: [
                             TextSpan(
-                              text:
-                                  "   ${serverProvider.servers!.elementAt(index).name.toString()} ${index == serverProvider.choosedIndex ? "(choosed)" : ""}\n",
+                              text: "   ${servers!.elementAt(index).name.toString()} ${index == Provider.of<ServerProvider>(context).choosedIndex ? "(choosed)" : ""}\n",
                               style: TextStyle(
                                 fontFamily: "Nunito Sans",
                                 fontSize: 14,
@@ -133,7 +148,7 @@ class _ServerScreenState extends State<ServerScreen> with TickerProviderStateMix
                               ),
                             ),
                             TextSpan(
-                              text: "   ${serverProvider.servers!.elementAt(index).ipNumber.toString()}\n",
+                              text: "   ${servers!.elementAt(index).ipNumber.toString()}\n",
                               style: TextStyle(
                                 fontFamily: "Nunito Sans",
                                 fontSize: 14,
@@ -313,7 +328,7 @@ class _ServerScreenState extends State<ServerScreen> with TickerProviderStateMix
                                 ],
                               ),
                               child: ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () => Provider.of<ServerProvider>(context,listen: false).chooseServer(index),
                                 style: ButtonStyle(
                                   backgroundColor: MaterialStateProperty.all(Color(myColors.primaryGreen())),
                                 ),

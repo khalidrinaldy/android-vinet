@@ -228,31 +228,30 @@ class Widgets {
 
   Widget buttonWhenPressed() {
     return Container(
-      width: 288,
-      height: 42,
-      alignment: Alignment.center,
-      decoration: BoxDecoration(
-        color: Color(myColors.darkGreen()).withOpacity(0.7),
-        borderRadius: BorderRadius.circular(10),
-        boxShadow: <BoxShadow>[
-          BoxShadow(
-            blurRadius: 4,
-            spreadRadius: 0,
-            offset: Offset(0, 4),
-            color: Colors.black.withOpacity(0.25),
-          ),
-        ],
-      ),
-      child: CircularProgressIndicator(
-        color: Color(myColors.secondaryTextColor()),
-      )
-    );
+        width: 288,
+        height: 42,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: Color(myColors.darkGreen()).withOpacity(0.7),
+          borderRadius: BorderRadius.circular(10),
+          boxShadow: <BoxShadow>[
+            BoxShadow(
+              blurRadius: 4,
+              spreadRadius: 0,
+              offset: Offset(0, 4),
+              color: Colors.black.withOpacity(0.25),
+            ),
+          ],
+        ),
+        child: CircularProgressIndicator(
+          color: Color(myColors.secondaryTextColor()),
+        ));
   }
 
-  Widget searchBox({String? thingToSearch}) {
+  Widget searchBox({String? thingToSearch, TextEditingController? searchController, void Function(String)? search}) {
     return Container(
-      width: 310,
-      height: 35,
+      width: 225,
+      height: 25,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(5),
         color: Colors.white,
@@ -265,16 +264,68 @@ class Widgets {
           ),
         ],
       ),
-      child: TextField(
+      child: TextFormField(
+        onFieldSubmitted: search!,
+        controller: searchController,
         decoration: InputDecoration(
+          isDense: true,
+          contentPadding: EdgeInsets.all(8),
           prefixIcon: Icon(
             Icons.search,
-            size: 20,
+            size: 16,
             color: Colors.black.withOpacity(0.5),
           ),
           hintText: "Search $thingToSearch",
+          hintStyle: TextStyle(fontSize: 11),
           fillColor: Colors.white,
         ),
+      ),
+    );
+  }
+
+  Widget incomeCard({Color? color, Icon? icon, String? title, String? amount}) {
+    return Container(
+      width: 120,
+      height: 90,
+      decoration: BoxDecoration(
+        color: color,
+        borderRadius: BorderRadius.circular(15),
+        boxShadow: <BoxShadow>[
+          BoxShadow(
+            offset: Offset(0, 2),
+            blurRadius: 4,
+            spreadRadius: 1,
+            color: color!.withOpacity(0.25),
+          ),
+        ],
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          icon!,
+          Text.rich(
+            TextSpan(
+              children: <TextSpan>[
+                TextSpan(
+                  text: "$title\n\n",
+                  style: TextStyle(
+                    fontSize: 11,
+                    color: Color(myColors.secondaryTextColor()),
+                  ),
+                ),
+                TextSpan(
+                  text: amount,
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 8,
+                    color: Color(myColors.secondaryTextColor()),
+                  ),
+                ),
+              ],
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ],
       ),
     );
   }

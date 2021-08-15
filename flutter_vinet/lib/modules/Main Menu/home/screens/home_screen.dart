@@ -17,6 +17,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  List<Server>? servers;
+  Server? choosedServer;
   Stream? streamServer;
   List<ConnectData> stats = [];
   final random = Random();
@@ -39,65 +41,58 @@ class _HomeScreenState extends State<HomeScreen> {
       }
       stats.add(ConnectData(random.nextDouble() * (200 - 50) + 50, random.nextDouble() * (600 - 100) + 100));
     });
-    streamServer = ServerProvider().streamServers(Duration(milliseconds: 1000));
+    streamServer = Provider.of<ServerProvider>(context, listen: false).streamServers(Duration(seconds: 1));
   }
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => ServerProvider(),
-      child: Consumer<ServerProvider>(
-        builder: (context, serverProvider, _) => Scaffold(
-          backgroundColor: Color(myColors.secondaryWhiteScreen()),
-          body: Container(
-            height: MediaQuery.of(context).size.height,
-            child: ListView(
-              shrinkWrap: true,
+    return Scaffold(
+      backgroundColor: Color(myColors.secondaryWhiteScreen()),
+      body: Container(
+        height: MediaQuery.of(context).size.height,
+        child: ListView(
+          shrinkWrap: true,
+          children: [
+            Stack(
               children: [
-                Stack(
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Container(
-                          width: MediaQuery.of(context).size.width,
-                          child: Image.asset(
-                            "assets/images/dashboard/ellipse.png",
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                      ],
+                    Container(
+                      width: MediaQuery.of(context).size.width,
+                      child: Image.asset(
+                        "assets/images/dashboard/ellipse.png",
+                        fit: BoxFit.fill,
+                      ),
                     ),
-                    StreamBuilder(
-                      stream: streamServer,
-                      builder: (BuildContext context, AsyncSnapshot snapshot) {
-                        List<Server> servers;
-                        Server choosedServer;
-                        if (snapshot.hasData) {
-                          servers = snapshot.data;
-                          choosedServer = servers.elementAt(serverProvider.choosedIndex!);
-                          return Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              _buildTitleHello(),
-                              _buildInformationCard(context, choosedServer),
-                              _buildRowSubMenu(context),
-                              _buildChart(choosedServer),
-                              _buildStatsServer(choosedServer),
-                            ],
-                          );
-                        } else {
-                          return Center(
-                            child: CircularProgressIndicator(),
-                          );
-                        }
-                      },
-                    )
                   ],
                 ),
+                StreamBuilder(
+                  stream: streamServer,
+                  builder: (BuildContext context, AsyncSnapshot snapshot) {
+                    if (snapshot.hasData) {
+                      servers = snapshot.data;
+                      choosedServer = servers!.elementAt(Provider.of<ServerProvider>(context).choosedIndex!);
+                      return Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          _buildTitleHello(),
+                          _buildInformationCard(context, choosedServer!),
+                          _buildRowSubMenu(context),
+                          _buildChart(choosedServer!),
+                          _buildStatsServer(choosedServer!),
+                        ],
+                      );
+                    } else {
+                      return Center(
+                        child: CircularProgressIndicator(),
+                      );
+                    }
+                  },
+                )
               ],
             ),
-          ),
+          ],
         ),
       ),
     );
@@ -406,7 +401,9 @@ class _HomeScreenState extends State<HomeScreen> {
             Column(
               children: [
                 GestureDetector(
-                  onTap: () => Navigator.pushNamed(context, '/payments'),
+                  onTap: () {
+                    Navigator.pushNamed(context, '/payments');
+                  },
                   child: Container(
                     height: 40,
                     width: 40,
@@ -533,7 +530,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Container(
             margin: EdgeInsets.only(left: 24, top: 50, bottom: 10),
             child: Text(
-              "Traffic Router SERVER PERMATA",
+              "Traffic Router ${server.name}",
               style: TextStyle(
                 fontWeight: FontWeight.w500,
                 fontSize: 12,
@@ -813,7 +810,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           LinearPercentIndicator(
                             width: 230,
                             lineHeight: 15,
-                            percent: dummyStats[index]["current"]/dummyStats[index]["total"],
+                            percent: dummyStats[index]["current"] / dummyStats[index]["total"],
                             progressColor: Color(myColors.primaryGreen()),
                             backgroundColor: Color(0xFFC4C4C4).withOpacity(0.2),
                           ),
@@ -821,16 +818,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             padding: EdgeInsets.only(right: 10),
                             width: 230,
                             alignment: Alignment.centerRight,
-                            child: Text(
-                              "${dummyStats[index]["current"]}/${dummyStats[index]["total"]}",
-                              textAlign: TextAlign.end,
-                              style: TextStyle(
-                                fontFamily: "Nunito Sans",
-                                fontWeight: FontWeight.w700,
-                                fontSize: 9,
-                                color: Color(myColors.secondaryTextColor()),
-                              )
-                            ),
+                            child: Text("${dummyStats[index]["current"]}/${dummyStats[index]["total"]}",
+                                textAlign: TextAlign.end,
+                                style: TextStyle(
+                                  fontFamily: "Nunito Sans",
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 9,
+                                  color: Color(myColors.secondaryTextColor()),
+                                )),
                           )
                         ],
                       ),

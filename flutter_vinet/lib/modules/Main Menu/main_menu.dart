@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_vinet/modules/Main%20Menu/home/screens/home_screen.dart';
 import 'package:flutter_vinet/modules/Main%20Menu/profile/screens/profile_screen.dart';
 import 'package:flutter_vinet/modules/Main%20Menu/server/screens/server_screen.dart';
+import 'package:flutter_vinet/provider/server_provider.dart';
 import 'package:flutter_vinet/widgets/widgets.dart';
+import 'package:provider/provider.dart';
 
 class MainMenu extends StatefulWidget {
   const MainMenu({Key? key}) : super(key: key);
