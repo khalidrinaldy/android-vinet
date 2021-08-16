@@ -43,4 +43,7 @@ class MyColors {
 
   //Yellow
   int primaryYellow() => 0xFFFFCA28;
+
+  //Orange 
+  int primaryOrange() => 0xFFF57C00;
 }

@@ -329,4 +329,45 @@ class Widgets {
       ),
     );
   }
+
+  Widget smallButton({Color? color, Widget? icon, String? text, VoidCallback? onPressed}) {
+    return Container(
+      height: 15,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(5),
+        color: color,
+        boxShadow: <BoxShadow>[
+          BoxShadow(
+            offset: Offset(0, 4),
+            blurRadius: 4,
+            spreadRadius: 0,
+            color: Colors.black.withOpacity(0.25),
+          ),
+        ],
+      ),
+      child: ElevatedButton(
+        onPressed: onPressed,
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all(color),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            icon!,
+            SizedBox(
+              width: 5,
+            ),
+            Text(
+              text!,
+              style: TextStyle(
+                fontWeight: FontWeight.w700,
+                fontSize: 10,
+                color: Colors.white,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }
