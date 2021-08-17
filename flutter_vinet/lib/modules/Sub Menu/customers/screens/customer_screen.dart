@@ -21,6 +21,9 @@ class _CustomerScreenState extends State<CustomerScreen> {
   List<Customer> customers = [];
   List<Customer> searchCustomer = [];
   bool isLoading = false;
+  List<bool> categoryPaid = [true, false, false];
+  List<Customer> customerPaid = [];
+  List<Customer> customerUnpaid = [];
 
   @override
   void initState() {
@@ -33,10 +36,24 @@ class _CustomerScreenState extends State<CustomerScreen> {
   void search(String value) {
     if (value.length != 0) {
       setState(() {
+        categoryPaid = [false, false, false];
+        categoryPaid[0] = true;
+        customers.clear();
+        customers.addAll(List.generate(
+          choosedServer.customers!.length > 10 ? 10 : choosedServer.customers!.length,
+          (index) => choosedServer.customers!.elementAt(index),
+        ));
         searchCustomer = choosedServer.customers!.where((q) => q.name!.toLowerCase().contains(value.toLowerCase())).toList();
       });
     } else {
       setState(() {
+        categoryPaid = [false, false, false];
+        categoryPaid[0] = true;
+        customers.clear();
+        customers.addAll(List.generate(
+          choosedServer.customers!.length > 10 ? 10 : choosedServer.customers!.length,
+          (index) => choosedServer.customers!.elementAt(index),
+        ));
         searchCustomer = customers;
       });
     }
@@ -44,17 +61,43 @@ class _CustomerScreenState extends State<CustomerScreen> {
 
   Future fetchDataMore() async {
     await Future.delayed(Duration(seconds: 2));
-    if (choosedServer.customers!.length - customers.length >= 10) {
-      setState(() {
-        customers.addAll(List.generate(10, (index) => choosedServer.customers!.elementAt(index + customers.length)));
-        isLoading = false;
-      });
-    } else {
-      setState(() {
-        customers.addAll(List.generate(
-            choosedServer.customers!.length - customers.length, (index) => choosedServer.customers!.elementAt(index + customers.length)));
-        isLoading = false;
-      });
+    if (categoryPaid[0]) {
+      if (choosedServer.customers!.length - customers.length >= 10) {
+        setState(() {
+          customers.addAll(List.generate(10, (index) => choosedServer.customers!.elementAt(index + customers.length)));
+          isLoading = false;
+        });
+      } else {
+        setState(() {
+          customers.addAll(List.generate(
+              choosedServer.customers!.length - customers.length, (index) => choosedServer.customers!.elementAt(index + customers.length)));
+          isLoading = false;
+        });
+      }
+    } else if (categoryPaid[1]) {
+      if (customerPaid.length - customers.length >= 10) {
+        setState(() {
+          customers.addAll(List.generate(10, (index) => customerPaid.elementAt(index + customers.length)));
+          isLoading = false;
+        });
+      } else {
+        setState(() {
+          customers.addAll(List.generate(customerPaid.length - customers.length, (index) => customerPaid.elementAt(index + customers.length)));
+          isLoading = false;
+        });
+      }
+    } else if (categoryPaid[2]) {
+      if (customerUnpaid.length - customers.length >= 10) {
+        setState(() {
+          customers.addAll(List.generate(10, (index) => customerUnpaid.elementAt(index + customers.length)));
+          isLoading = false;
+        });
+      } else {
+        setState(() {
+          customers.addAll(List.generate(customerUnpaid.length - customers.length, (index) => customerUnpaid.elementAt(index + customers.length)));
+          isLoading = false;
+        });
+      }
     }
   }
 
@@ -65,6 +108,26 @@ class _CustomerScreenState extends State<CustomerScreen> {
       });
       fetchDataMore();
     }
+  }
+
+  void setCategoryPaid(int index) {
+    setState(() {
+      searchController.clear();
+      categoryPaid = [false, false, false];
+      categoryPaid[index] = true;
+      customers.clear();
+      if (index == 1) {
+        customers.addAll(List.generate(
+          customerPaid.length > 10 ? 10 : customerPaid.length,
+          (index) => customerPaid.elementAt(index),
+        ));
+      } else if (index == 2) {
+        customers.addAll(List.generate(
+          customerUnpaid.length > 10 ? 10 : customerUnpaid.length,
+          (index) => customerUnpaid.elementAt(index),
+        ));
+      }
+    });
   }
 
   @override
@@ -85,10 +148,13 @@ class _CustomerScreenState extends State<CustomerScreen> {
             servers = snapshot.data;
             choosedServer = servers.elementAt(Provider.of<ServerProvider>(context).choosedIndex!);
             if (searchController.text.length == 0 && customers.length == 0) {
+              customerPaid.addAll(choosedServer.customers!.where((customer) => customer.isPaid!));
+              customerUnpaid.addAll(choosedServer.customers!.where((customer) => !customer.isPaid!));
               customers.addAll(List.generate(
                 choosedServer.customers!.length > 10 ? 10 : choosedServer.customers!.length,
                 (index) => choosedServer.customers!.elementAt(index),
               ));
+              searchCustomer = customers;
             }
             return CustomScrollView(
               controller: scrollController,
@@ -132,10 +198,109 @@ class _CustomerScreenState extends State<CustomerScreen> {
             centerTitle: true,
             title: top > 71 && top < 91
                 ? Text("")
-                : Widgets().searchBox(
+                : /* Widgets().searchBox(
                     thingToSearch: "Customer",
                     searchController: searchController,
                     search: (value) => search(value),
+                  ), */
+                Stack(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(top: 50),
+                            width: 150,
+                            height: 28,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: Color(myColors.primarySoftGreen()).withOpacity(0.55),
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                GestureDetector(
+                                  onTap: () => setCategoryPaid(0),
+                                  child: Container(
+                                    width: 50,
+                                    height: 28,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(50),
+                                      color: categoryPaid[0] ? Colors.white : null,
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: Text(
+                                      "All",
+                                      style: TextStyle(
+                                        fontFamily: "Nunito Sans",
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 10,
+                                        color: categoryPaid[0] ? Colors.black : Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                GestureDetector(
+                                  onTap: () => setCategoryPaid(1),
+                                  child: Container(
+                                    width: 50,
+                                    height: 28,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(50),
+                                      color: categoryPaid[1] ? Colors.white : null,
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: Text(
+                                      "Paid",
+                                      style: TextStyle(
+                                        fontFamily: "Nunito Sans",
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 10,
+                                        color: categoryPaid[1] ? Colors.black : Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                GestureDetector(
+                                  onTap: () => setCategoryPaid(2),
+                                  child: Container(
+                                    width: 50,
+                                    height: 28,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(50),
+                                      color: categoryPaid[2] ? Colors.white : null,
+                                    ),
+                                    alignment: Alignment.center,
+                                    child: Text(
+                                      "Unpaid",
+                                      style: TextStyle(
+                                        fontFamily: "Nunito Sans",
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: 10,
+                                        color: categoryPaid[2] ? Colors.black : Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(top: 100),
+                            child: Widgets().searchBox(
+                              thingToSearch: "Customer",
+                              searchController: searchController,
+                              search: (value) => search(value),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
             background: Stack(
               fit: StackFit.expand,
@@ -192,7 +357,11 @@ class _CustomerScreenState extends State<CustomerScreen> {
                             width: 200,
                             child: Row(
                               children: [
-                                Icon(Icons.account_circle_rounded, color: Color(myColors.primaryGreen()), size: 30,),
+                                Icon(
+                                  Icons.account_circle_rounded,
+                                  color: Color(myColors.primaryGreen()),
+                                  size: 30,
+                                ),
                                 SizedBox(width: 14),
                                 Expanded(
                                   child: Text(
@@ -231,7 +400,10 @@ class _CustomerScreenState extends State<CustomerScreen> {
                                     ),
                                   ),
                                 ),
-                                Icon(Icons.keyboard_arrow_right_rounded, size: 24, ),
+                                Icon(
+                                  Icons.keyboard_arrow_right_rounded,
+                                  size: 24,
+                                ),
                               ],
                             ),
                           ),

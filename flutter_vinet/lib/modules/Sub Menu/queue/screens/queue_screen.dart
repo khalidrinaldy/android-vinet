@@ -4,6 +4,7 @@ import 'package:flutter_vinet/models/server_model.dart';
 import 'package:flutter_vinet/provider/server_provider.dart';
 import 'package:flutter_vinet/widgets/widgets.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class QueueScreen extends StatefulWidget {
   const QueueScreen({Key? key}) : super(key: key);
@@ -63,6 +64,29 @@ class _QueueScreenState extends State<QueueScreen> {
         isLoading = true;
       });
       fetchDataMore();
+    }
+  }
+
+  openwhatsapp(BuildContext context, Queue queue) async {
+    var phone = queue.phone;
+    var text = "Hello There";
+    var url = "https://wa.me/$phone?text=$text";
+    var encodedUrl = Uri.encodeFull(url);
+    if (await canLaunch(encodedUrl)) {
+      await launch(encodedUrl);
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: new Text("whatsapp no installed")));
+    }
+  }
+
+  sharewhatsapp(BuildContext context, Queue queue) async {
+    var text = "Hello There\n\nName\t\t:${queue.sender}\nPhone\t\t:${queue.phone}\nAddress\t\t:${queue.address}";
+    var url = "https://wa.me/?text=$text";
+    var encodedUrl = Uri.encodeFull(url);
+    if (await canLaunch(encodedUrl)) {
+      await launch(encodedUrl);
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: new Text("whatsapp no installed")));
     }
   }
 
@@ -166,7 +190,7 @@ class _QueueScreenState extends State<QueueScreen> {
           searchController.text.length == 0 ? queue.length : searchQueue.length,
           (index) {
             int listLength;
-            if (searchController.text.length == 0 ) {
+            if (searchController.text.length == 0) {
               listLength = queue.length;
             } else {
               listLength = searchQueue.length;
@@ -420,7 +444,7 @@ class _QueueScreenState extends State<QueueScreen> {
                               ],
                             ),
                             child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () => sharewhatsapp(context, q),
                               style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Color(myColors.primaryBlue()))),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -455,7 +479,7 @@ class _QueueScreenState extends State<QueueScreen> {
                               ],
                             ),
                             child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () => openwhatsapp(context, q),
                               style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Color(myColors.primaryGreen()))),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
