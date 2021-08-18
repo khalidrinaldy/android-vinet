@@ -1272,7 +1272,7 @@
             "month": "June",
             "year": 2021,
             "totalBill": 162000000,
-            "unPaid": 130000000,
+            "unpaid": 130000000,
             "paid": 32000000,
             "tax": 690000,
             "managedServices": 700000
@@ -1496,7 +1496,7 @@
             "month": "June",
             "year": 2021,
             "totalBill": 162000000,
-            "unPaid": 130000000,
+            "unpaid": 130000000,
             "paid": 32000000,
             "tax": 690000,
             "managedServices": 700000
@@ -1720,7 +1720,7 @@
             "month": "June",
             "year": 2021,
             "totalBill": 162000000,
-            "unPaid": 130000000,
+            "unpaid": 130000000,
             "paid": 32000000,
             "tax": 690000,
             "managedServices": 700000
@@ -1944,7 +1944,7 @@
             "month": "June",
             "year": 2021,
             "totalBill": 162000000,
-            "unPaid": 130000000,
+            "unpaid": 130000000,
             "paid": 32000000,
             "tax": 690000,
             "managedServices": 700000
